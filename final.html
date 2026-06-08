@@ -18,15 +18,31 @@
       <a href="#" class="underline">Buy Now !</a> 
     </div>
     <div class="flex text-white gap-3 px-3 max-md:ml-auto">
+        <div id = "container" class="hidden bg-white pl-4 pr-10 rounded-sm">
+            <div class="flex gap-3">
+                <img src="germany.png" alt="" class="h-6">
+                <h6 class="text-black">Germany</h6>
+            </div>
+            <div class="flex gap-3">
+                <img src="united-kingdom.png" alt="" class="h-6">
+                <h6 class="text-black">English</h6>
+            </div>
+            <div class="flex gap-3">
+                <img src="turkish.png" alt="" class="h-4">
+                <h6 class="text-black">Turkish</h6>
+            </div>
+        </div>
         <div class="flex gap-3 items-center">
             <img src="/united-states.png" alt="" class="h-6">
             <h6>English</h6>
-            <img src="icons8-expand-arrow-50.png" alt="" class="w-3">
+            <button id="btn1"><img src="icons8-expand-arrow-50.png" alt="" class="w-3"></button>
         </div>
-        |
+        <img src="verical.png" alt="" class="w-2 h-6">
         <div class="flex items-center gap-3">
             <h5>USD</h5>
+           <button id="btn2">
             <img src="icons8-expand-arrow-50.png" alt="" class="w-3">
+           </button>
         </div>
     </div>
 </header>
@@ -147,5 +163,17 @@
     </div>
   
    </main>
+   <script>
+    const getElement = (...ids)=>{
+        return ids.reduce((obj,id)=>{
+            obj[id] = document.getElementById(id)
+            return obj;
+        },{})
+    }
+    const{btn1,btn2,container} = getElement('btn1','btn2','container')
+    btn1.addEventListener('click',()=>{
+        container.classList.remove('hidden')
+    })
+   </script>
 </body>
 </html>
