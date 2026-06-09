@@ -53,7 +53,41 @@
 </header>
    <section class="flex justify-around items-center mt-8">
         <div class="lg:hidden md:hidden ">
-            <img src="ogw.png" alt="" class="h-8 w-8 ">
+           <button id="btn3"><img src="ogw.png" alt="" class="h-8 w-8 "></button>
+        </div>
+        <div id="menu" class="hidden flex flex-col bg-white shadow-xl font-bold absolute top-0 left-0 h-full w-[45%] px-6 text-lg gap-8 pt-8">
+            <div class="flex justify-between items-center gap-24 -mx-6 px-6 pb-4 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
+                <h5 class="text-[#0da487]">MENU</h5>
+                <img src="icons8-cross-50.png" alt="" class="h-6">
+            </div>
+            <div class="flex justify-between items-center gap-24 mt-6">
+                <h5 class="text-[#777f8d]">Home</h5>
+                <img src="icons8-chevron-down-24.png" alt="" class="h-3">
+            </div>
+            <div class="flex justify-between items-center gap-24">
+                <h5 class="text-[#777f8d]">Shop</h5>
+                <img src="icons8-chevron-down-24.png" alt="" class="h-3">
+            </div>
+            <div class="flex justify-between items-center gap-24">
+                <h5 class="text-[#777f8d]">product</h5>
+                <img src="icons8-chevron-down-24.png" alt="" class="h-3">
+            </div>
+            <div class="flex justify-between items-center gap-24">
+                <h5 class="text-[#777f8d]">Mega Menu</h5>
+                <img src="icons8-chevron-down-24.png" alt="" class="h-3">
+            </div>
+            <div class="flex justify-between items-center gap-24">
+                <h5 class="text-[#777f8d]">Blog</h5>
+                <img src="icons8-chevron-down-24.png" alt="" class="h-3">
+            </div>
+            <div class="flex justify-between items-center gap-24">
+                <h5 class="text-[#777f8d]">Pages</h5>
+                <img src="icons8-chevron-down-24.png" alt="" class="h-3">
+            </div>
+            <div class="flex justify-between items-center gap-24">
+                <h5 class="text-[#777f8d]">Seller</h5>
+                <img src="icons8-chevron-down-24.png" alt="" class="h-3">
+            </div>
         </div>
         <div class="">
             <img src="1_1.png" alt="" class="h-8 max-sm:w-[130px] max-sm:h-[25px] max-md:w-[130px] max-md:h-[25px]">
@@ -209,12 +243,15 @@
             return obj;
         },{})
     }
-    const{btn1,btn2,container,container2} = getElement('btn1','btn2','container','container2')
+  const { btn1, btn2, btn3, container, container2, menu } = getElement('btn1', 'btn2', 'btn3', 'container', 'container2', 'menu')
     btn1.addEventListener('click',()=>{
         container.classList.toggle('hidden')
     })
     btn2.addEventListener('click',()=>{
         container2.classList.toggle('hidden')
+    })
+    btn3?.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
     })
 
    </script>
